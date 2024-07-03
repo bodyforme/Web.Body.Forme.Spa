@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Forme Spa</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos específicos para el botón de cookies */
+        .cookies-policy {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: hsla(0, 89%, 64%, 0.808);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            z-index: 1000;
+            display: none;
+        }
+
+        .cookies-policy p {
+            margin: 0;
+        }
+
+        .cookies-policy a {
+            color: #ffcc00;
+            text-decoration: underline;
+        }
+
+        .cookies-policy button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .cookies-policy button:hover {
+            opacity: 0.8;
+        }
+
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8e4e1; /* Nuevo color de fondo rosa palo de rosa */
+            text-align: center;
+        }
+
+        header .hero-section {
+            padding: 20px;
+            background-color: #f8e4e1; /* Color de fondo rosa palo de rosa */
+        }
+
+        header .logo {
+            width: 150px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        h1, h2, p {
+            color: #333;
+        }
+
+        .cta-nav .cta-btn {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .section {
+            padding: 50px 20px;
+            background-color: #f8e4e1; /* Nuevo color de fondo rosa palo de rosa */
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .video-container {
+            margin: 20px auto;
+            max-width: 560px;
+        }
+
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .servicio {
+            flex: 0 0 auto;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .servicio img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .carousel-controls {
+            margin-top: 20px;
+        }
+
+        .prev-btn, .next-btn, .toggle-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        form input, form select, form textarea, form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: red;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Estilos específicos para el mapa de Google */
+        .map-container {
+            max-width: 100%;
+            height: 300px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+   <!-- Encabezado -->
+<header>
+    <div class="hero-section">
+        <img src="logo en png.png" alt="Body Forme Spa Logo" class="logo">
+        <h1>Bienvenidos a Body Forme Spa</h1>
+        <p>Tu destino para la relajación y el rejuvenecimiento</p>
+        <nav class="cta-nav">
+            <a href="#servicios" class="cta-btn">Nuestros Servicios</a>
+            <a href="#promociones" class="cta-btn">Promociones</a>
+            <a href="#testimonios" class="cta-btn">Testimonios</a>
+            <a href="#contacto" class="cta-btn">Contacto</a>
+        </nav>
+    </div>
+</header>
+
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="section">
+        <div class="content">
+            <h2>Sobre Nosotros</h2>
+            <p>En Body Forme Spa, nos dedicamos a brindarte una experiencia única de bienestar y belleza. Nuestro equipo de profesionales está aquí para ofrecerte los mejores tratamientos personalizados para tu piel y cuerpo.</p>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/OSfzjrAVyBw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+     <!-- Sección Nuestros Servicios -->
+     <section id="servicios" class="section">
+        <div class="content">
+            <h2>Nuestros Servicios</h2>
+            <div class="carousel">
+                <div class="servicio" onclick="location.href='#contacto';">
+                    <img src="descarga__1_-removebg-preview.png" alt="Limpieza Facial">
+                    <h3>Limpieza Facial</h3>
+                </div>
+                <div class="servicio" onclick="location.href='#contacto';">
+                    <img src="derramapen.jpeg" alt="Dermapen Facial">
+                    <h3>Dermapen Facial</h3>
+                </div>
+                <div class="servicio" onclick="location.href='#contacto';">
+                    <img src="radiofrecuen cia.png" alt="Radiofrecuencia Facial">
+                    <h3>Radiofrecuencia Facial</h3>
+                </div>
+                <div class="servicio" onclick="location.href='#contacto';">
+                    <img src="peeling utlrasomnico.png" alt="Peeling Ultrasónico">
+                    <h3>Peeling Ultrasónico</h3>
+                </div>
+                <div class="servicio" onclick="location.href='#contacto';">
+                    <img src="rejuvenicimiento facial.png" alt="Tratamiento Antiedad">
+                    <h3>Tratamiento Antiedad</h3>
+                </div>
+                <div class="servicio" onclick="location.href='#contacto';">
+                    <img src="oxigenacvion.png" alt="Oxigenación Facial">
+                    <h3>Oxigenación Facial</h3>
+                </div>
+                <div class="servicio" onclick="location.href='#contacto';">
+                    <img src="plasmapen.png" alt="Plasmapen">
+                    <h3>Plasmapen</h3>
+                </div>
+                <div class="servicio" onclick="location.href='#contacto';">
+                    <img src="hidratacion facialk.png" alt="Hidratación Facial">
+                    <h3>Hidratación Facial</h3>
+                </div>
+                <div class="servicio" onclick="location.href='#contacto';">
+                    <img src="lifting.png" alt="Lifting de Pestañas">
+                    <h3>Lifting de Pestañas</h3>
+                </div>
+                <div class="servicio" onclick="location.href='#contacto';">
+                    <img src="Laminado de Cejas.png" alt="Laminado de Cejas">
+                    <h3>Laminado de Cejas</h3>
+                </div>
+                <div class="servicio" onclick="location.href='#contacto';">
+                    <img src="Peeling Corporal.png" alt="Peeling Corporal">
+                    <h3>Peeling Corporal</h3>
+                </div>
+                <div class="servicio" onclick="location.href='#contacto';">
+                    <img src="Masaje Contracturas.png" alt="Masaje Contracturas">
+                    <h3>Masaje Contracturas</h3>
+                </div>
+                <div class="servicio" onclick="location.href='#contacto';">
+                    <img src="Masaje Tensión.png" alt="Masaje Tensión">
+                    <h3>Masaje Tensión</h3>
+                </div>
+                <div class="servicio" onclick="location.href='#contacto';">
+                    <img src="descarga (1).png" alt="Masaje Craneofacial">
+                    <h3>Masaje Craneofacial</h3>
+                </div>
+                <div class="servicio" onclick="location.href='#contacto';">
+                    <img src="Piernas Cansadas.png" alt="Piernas Cansadas">
+                    <h3>Piernas Cansadas</h3>
+                </div>
+                <div class="servicio" onclick="location.href='#contacto';">
+                    <img src="Drenaje Linfático.png" alt="Drenaje Linfático">
+                    <h3>Drenajo Linfático</h3>
+                </div>
+                <div class="servicio" onclick="location.href='#contacto';">
+                    <img src="Masajes Reductores.png" alt="Masajes Reductores">
+                    <h3>Masajes Reductores</h3>
+                </div>
+                <div class="servicio" onclick="location.href='#contacto';">
+                    <img src="Auriculoterapia.png" alt="Auriculoterapia">
+                    <h3>Auriculoterapia</h3>
+                </div>
+                <div class="servicio" onclick="location.href='#contacto';">
+                    <img src="Ttv Venas.png" alt="Ttv Venas">
+                      <h3>Ttv Venas</h3>
+                </div>
+                </div>
+                <div class="carousel-controls">
+                <button class="prev-btn">Anterior</button>
+                <button id="start-carousel-btn" class="next-btn">Siguiente</button>
+                </div>
+                </div>
+                </section>
+                
+                
+                <!-- Sección Promociones -->
+                <section id="promociones" class="section">
+                    <div class="content">
+                        <h2>Promociones</h2>
+                        <div id="promociones-container" class="promociones-container">
+                            <div class="promocion" onclick="location.href='#contacto';">
+                                <img src="descargar.jpeg" alt="Promoción 1">
+                                <h3>Promoción 1</h3>
+                                <p>Escleroterapia con la mejor tecnología desde 80 mil pesos.</p>
+                            </div>
+                            <div class="promocion" onclick="location.href='#contacto';">
+                                <img src="descargar.png" alt="Promoción 2">
+                                <h3>Promoción 2</h3>
+                                <p>Eliminación de verrugas desde 30 mil pesos.</p>
+                            </div>
+                            <div class="promocion" onclick="location.href='#contacto';">
+                                <img src="c18423dc-de88-4fbb-91b0-306b916b862c.jpeg" alt="Promoción 3">
+                                <h3>Promoción 3</h3>
+                                <p>Escleroterapia con la mejor tecnología desde 80 mil pesos.</p>
+                            </div>
+                        </div>
+                        <button class="toggle-btn" onclick="toggleVisibility('promociones-container')">Ocultar/Mostrar Promociones</button>
+                    </div>
+                </section>
+                
+              <!-- Sección Testimonios -->
+    <section id="testimonios" class="section">
+        <div class="content">
+            <h2>Testimonios</h2>
+            <div id="testimonios-container" class="testimonios-container">
+                <div class="testimonio-video">
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/EAfBj4K4Fh0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="testimonio-video">
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/jx46JcCfrdo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="testimonio-video">
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ugSZhtqDzlU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <button class="toggle-btn" onclick="toggleVisibility('testimonios-container')">Ocultar/Mostrar Testimonios</button>
+        </div>
+    </section>
+
+                
+ <!-- Sección Contacto -->
+<section id="contacto" class="section">
+    <div class="content">
+        <h2>Agenda tu Visita</h2>
+        <div class="agenda-container">
+            <p>Encuéntranos en:</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.834895670924!2d-74.15086252636064!3d4.623528542324523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9e9f4d48bd77%3A0x4c8e659b16206e5e!2sCra.%2078%20%2335-23%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1sen!2smx!4v1719954568399!5m2!1sen!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
+            <form id="agendaForm" class="agenda-form" action="enviar_formulario.php" method="post">
+                <label for="fecha">Selecciona la Fecha</label>
+                <input type="date" id="fecha" name="fecha" required>
+                
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <label for="hora">Selecciona la Hora</label>
+                <input type="time" id="hora" name="hora" required>
+                
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="servicio">Selecciona el Servicio</label>
+                <select id="servicio" name="servicio" required>
+                    <option value="">Selecciona un servicio...</option>
+                    <option value="Limpieza Facial">Limpieza Facial</option>
+                    <option value="Dermapen Facial">Dermapen Facial</option>
+                    <option value="Radiofrecuencia Facial">Radiofrecuencia Facial</option>
+                    <option value="Peeling Ultrasónico">Peeling Ultrasónico</option>
+                    <option value="Tratamiento Antiedad">Tratamiento Antiedad</option>
+                    <option value="Oxigenación Facial">Oxigenación Facial</option>
+                    <option value="Plasmapen">Plasmapen</option>
+                    <option value="Hidratación Facial">Hidratación Facial</option>
+                    <option value="Lifting de Pestañas">Lifting de Pestañas</option>
+                    <option value="Laminado de Cejas">Laminado de Cejas</option>
+                    <option value="Peeling Corporal">Peeling Corporal</option>
+                    <option value="Masaje Contracturas">Masaje Contracturas</option>
+                    <option value="Masaje Tensión">Masaje Tensión</option>
+                    <option value="Masaje Craneofacial">Masaje Craneofacial</option>
+                    <option value="Piernas Cansadas">Piernas Cansadas</option>
+                    <option value="Drenaje Linfático">Drenaje Linfático</option>
+                    <option value="Masajes Reductores">Masajes Reductores</option>
+                    <option value="Auriculoterapia">Auriculoterapia</option>
+                    <option value="Ttv Venas">Ttv Venas</option>
+                </select>
+                
+                <label for="message">Mensaje Adicional</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+                
+                <button type="submit">Agendar Visita</button>
+            </form>
+        </div>
+    </div>
+</section>
+                <!-- Redes sociales -->
+                <div class="redes-sociales">
+                <a href="https://www.facebook.com/profile.php?id=61559939721550&mibextid=ZbWKwL" target="_blank"><img src="b5b3fb9c9682701bfa9c2fbe3fb6c932.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/body.forme?igsh=bzNhZ3ZpMDMwMGNs" target="_blank"><img src="07f0d7b69ef071571e4ada2f4d6a053a-cono-de-instagram-colorido-by-vexels.png"></a>
+                <a href="https://www.tiktok.com/@spabodyforme?_t=8niviqpNVrx&_r=1" target="_blank"><img src="aeaeea971545c0bdbc358a241c29718f.png" alt="TikTok"></a>
+                <a href="https://youtube.com/@body-forme?si=Lb2ftlaxoEUX9Kyi" target="_blank"><img src="f2ea1ded4d037633f687ee389a571086-logotipo-del-icono-de-youtube.png" alt="YouTube"></a>
+               </div>
+
+                
+                <!-- Política de cookies -->
+                <div class="cookies-policy" id="cookiesPolicy">
+                    <div class="content">
+                        <p>Este sitio web utiliza cookies para mejorar la experiencia del usuario. <a href="#">Más información</a></p>
+                        <button onclick="acceptCookies()">Aceptar Cookies</button>
+                    </div>
+                </div>
+                
+                <script src="scripts.js"></script>
+                <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+                <script>
+                    // Configuración de EmailJS
+                    (function() {
+                        emailjs.init("KYy8oV76DanY-auil"); // Reemplaza con tu User ID de EmailJS
+                    })();
+                
+                    // Función para enviar el formulario
+                    document.getElementById('agendaForm').addEventListener('submit', function(event) {
+                        event.preventDefault();
+                
+                        // Recolectar la información del formulario
+                        var formData = {
+                            fecha: document.getElementById('fecha').value,
+                            hora: document.getElementById('hora').value,
+                            name: document.getElementById('name').value,
+                            email: document.getElementById('email').value,
+                            message: document.getElementById('message').value
+                        };
+                
+                        // Enviar el formulario mediante EmailJS
+                        emailjs.send("service_345r5os", "template_i18dw9o", formData)
+                            .then(function(response) {
+                                console.log('Correo enviado correctamente', response.status, response.text);
+                                alert('¡Gracias! Tu mensaje ha sido enviado correctamente.');
+                            }, function(error) {
+                                console.log('Error al enviar el correo', error);
+                                alert('Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.');
+                            });
+                    });
+                
+                    // Función para aceptar las cookies
+                    function acceptCookies() {
+                        document.getElementById('cookiesPolicy').style.display = 'none'; // Oculta la política de cookies
+                        // Aquí podrías implementar la lógica para guardar la aceptación de cookies en el navegador o en una base de datos
+                    }
+                
+                    // Función para alternar la visibilidad de elementos
+                    function toggleVisibility(id) {
+                        var element = document.getElementById(id);
+                        if (element.style.display === 'none') {
+                            element.style.display = 'flex';
+                        } else {
+                            element.style.display = 'none';
+                        }
+                    }
+                
+                    // Mostrar la política de cookies al cargar la página
+                    window.onload = function() {
+                        document.getElementById('cookiesPolicy').style.display = 'block';
+                    };
+                </script>
+                </body>
+             </html>

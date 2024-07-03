@@ -1,0 +1,44 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Recoge los datos del formulario
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $services = htmlspecialchars($_POST['services']);
+    $message = htmlspecialchars($_POST['message']);
+
+    // Correo del destinatario (correo de tu cliente)
+    $to = "cliente@example.com"; // Cambia esto al correo real de tu cliente
+
+    // Asunto del correo
+    $subject = "Nuevo mensaje de contacto de $name";
+
+    // Cuerpo del correo
+    $body = "
+        <html>
+        <head>
+            <title>Nuevo mensaje de contacto</title>
+        </head>
+        <body>
+            <h2>Información del contacto</h2>
+            <p><strong>Nombre:</strong> $name</p>
+            <p><strong>Correo Electrónico:</strong> $email</p>
+            <p><strong>Servicio de Interés:</strong> $services</p>
+            <p><strong>Mensaje:</strong></p>
+            <p>$message</p>
+        </body>
+        </html>
+    ";
+
+    // Encabezados del correo
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers .= "From: <$email>" . "\r\n";
+
+    // Envío del correo
+    if (mail($to, $subject, $body, $headers)) {
+        echo "¡Correo enviado con éxito!";
+    } else {
+        echo "Error al enviar el correo.";
+    }
+}
+?>

@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8e4e1; /* Color rosado palo de rosa */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header .hero-section {
+    padding: 20px;
+    background-color: #f8e4e1;
+}
+
+header .logo {
+    width: 150px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+h1, h2, p {
+    color: #333;
+}
+
+.cta-nav .cta-btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.section {
+    padding: 50px 20px;
+    background-color: #f8e4e1;
+}
+
+.video-container {
+    margin: 20px auto;
+    max-width: 560px;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicio {
+    flex: 0 0 auto;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.servicio img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.carousel-controls {
+    margin-top: 20px;
+}
+
+.prev-btn, .next-btn, .toggle-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form select, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+/* Estilos generales */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    padding: 40px 0;
+    background-color: #f8f8f8;
+}
+
+.content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Estilos específicos para el formulario de contacto */
+.agenda-container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.agenda-form {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.agenda-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.agenda-form input[type="date"],
+.agenda-form input[type="time"],
+.agenda-form input[type="text"],
+.agenda-form input[type="email"],
+.agenda-form textarea,
+.agenda-form select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.agenda-form textarea {
+    grid-column: span 2;
+    height: 100px;
+}
+
+.agenda-form button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.agenda-form button:hover {
+    opacity: 0.8;
+}
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.redes-sociales a {
+    display: inline-block;
+    margin: 0 10px; /* Ajusta el margen entre los íconos */
+}
+
+.redes-sociales img {
+    width: 30px; /* Ajusta el tamaño de los íconos */
+    height: auto;
+}
+.map-container {
+    max-width: 100%;
+    height: 250px; /* Ajusta la altura del mapa según sea necesario */
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
